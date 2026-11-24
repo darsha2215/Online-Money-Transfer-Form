@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Online Money Transfer Form</title> 
+        <!-- Linking the external CSS file --> 
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Online Money Transfer</h1>
+                <p>Fill in the details below to send money securely</p>
+            </header>
+            <form action="#" method="post">
+                <!-- Section 1: Sender details -->
+                <fieldset>
+                    <legend>Sender Details</legend>
+                    <div class="grid">
+                        <label class="field">Full Name 
+                            <input type="text" placeholder="Your name" minlength="3" required></label>
+                        <label class="field">Account Number
+                            <input type="text" placeholder="9 to 18 digits" pattern="[0-9]{9,18}" required></label>
+                        <label class="field">Mobile Number
+                            <input type="tel" placeholder="10 digit number" pattern="[6-9][0-9]{9}" required></label>
+                        <label class="field">Email
+                            <input type="email" placeholder="you@example.com" required></label>
+                        </div>
+                </fieldset>
+                <!-- Section 2: Receiver details -->
+                <fieldset>
+                    <legend>Receiver Details</legend>
+                    <div class="grid">
+                        <label class="field">Receiver Name 
+                            <input type="text" placeholder="Receiver's name" minlength="3" required></label>
+                        <label class="field">Account Number
+                            <input type="text" placeholder="9 to 18 digits" pattern="[0-9]{9,18}" required></label>
+                        <label class="field">Bank Name 
+                            <select required>
+                                <option value="">-- Select Bank --</option>
+                                <option>State Bank of India</option>
+                                <option>HDFC Bank</option>
+                                <option>ICICI Bank</option>
+                            </select></label>
+                            <label class="field">IFSC Code
+                                <input type="text" placeholder="e.g. SBIN0001234" pattern="[A-Z]{4}0[A-Z0-9]{6}" maxlength="11" required></label>
+                            </div>
+                        </fieldset>
+                        <!-- Section 3: Transfer details -->
+                        <fieldset>
+                            <legend>Transfer Details</legend>
+                            <div class="grid">
+                                <label class="field">Amount (₹)
+                                    <input type="number" placeholder="Enter amount" min="1" max="200000" required></label>
+                                <label class="field">Transfer Date
+                                    <input type="date" required></label>
+                                </div>
+                                <!-- Radio buttons for transfer mode -->
+                                <p class="title">Transfer Mode</p>
+                                <div class="options">
+                                    <label><input type="radio" name="mode" required> UPI</label>
+                                    <label><input type="radio" name="mode"> IMPS</label>
+                                    <label><input type="radio" name="mode"> NEFT</label>index.html
+                                    <label><input type="radio" name="mode"> RTGS</label>
+                                </div>
+                                <label class="field">Remarks (optional)
+                                    <textarea rows="2" maxlength="100" placeholder="Reason for transfer"></textarea></label>
+                                </fieldset>
+                                <label class="confirm">
+                                    <input type="checkbox" required> I confirm that the above details are correct.
+                                </label>
+                                <!-- Submit and Reset buttons -->
+                                <div class="buttons">
+                                    <button type="submit" class="submit">Transfer Money</button>
+                                    <button type="reset" class="reset">Reset</button>
+                                </div>
+            </form>
+        </div>
+    </body>
+</html>
